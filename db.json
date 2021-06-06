@@ -1,0 +1,25 @@
+{
+  "charArray": [
+    {
+      "id": 1,
+      "race": "Human",
+      "status": "Full-Health",
+      "comment": "I am feeling super!",
+      "name": "Ramesh"
+    },
+    {
+      "id": 2,
+      "name": "Suresh",
+      "race": "Human",
+      "status": "Full-Health",
+      "comment": "Lets get suresh a new comment"
+    },
+    {
+      "id": 3,
+      "name": "Brijesh",
+      "race": "Human",
+      "status": "Full-Health",
+      "comment": "Brijesh is feeling awesome"
+    }
+  ]
+}
