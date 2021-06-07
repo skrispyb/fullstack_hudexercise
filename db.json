@@ -5,21 +5,33 @@
       "race": "Human",
       "status": "Full-Health",
       "comment": "I am feeling super!",
-      "name": "Ramesh"
+      "name": "Ramesh",
+      "health": 150,
+      "stamina": 200,
+      "gold": 72,
+      "location": 26
     },
     {
       "id": 2,
       "name": "Suresh",
       "race": "Human",
       "status": "Full-Health",
-      "comment": "Lets get suresh a new comment"
+      "comment": "",
+      "health": 150,
+      "stamina": 200,
+      "gold": 75,
+      "location": 23
     },
     {
       "id": 3,
       "name": "Brijesh",
       "race": "Human",
       "status": "Full-Health",
-      "comment": "Brijesh is feeling awesome"
+      "comment": "Brijesh is feeling awesome",
+      "health": 150,
+      "stamina": 200,
+      "gold": 75,
+      "location": 23
     }
   ]
 }

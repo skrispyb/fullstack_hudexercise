@@ -16,7 +16,7 @@ const Comment = (props) => {
 
     return (
             <form onSubmit={(e) => onSubmit(e)}>
-                <label><span className={props.comment ? 'hidden' : 'visible'}>Add a </span><span className={props.comment ? 'visible' : 'hidden'}>Update </span>comment<br />
+                <label><span className={props.comment ? 'hidden' : 'visible'}>Add a </span><span className={props.comment ? 'visible' : 'hidden'}>Update </span>comment:<br />
                     <input onChange={e => setComment(e.target.value)} />
                 </label><br />
                 <button>Submit

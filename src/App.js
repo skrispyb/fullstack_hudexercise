@@ -58,9 +58,53 @@ export default function App() {
         setContent(content)
     }
 
+    const updateHealthStaminaGold = async (update) => {
+        const charToUpdate = await fetchCharacter(update.id)
+        const updChar = { ...charToUpdate, health: update.health, stamina: update.stamina, gold: update.gold}
+        await fetch(`http://localhost:5555/charArray/${update.id}`, {
+            method : 'PUT',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify(updChar)
+        })
+        const content = await fetchArray()
+        setContent(content)
+    }
+
+    const updateLocation = async (update) => {
+        const charToUpdate = await fetchCharacter(update.id)
+        const updChar = { ...charToUpdate, location: update.location, gold: update.gold}
+        await fetch(`http://localhost:5555/charArray/${update.id}`, {
+            method : 'PUT',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify(updChar)
+        })
+        const content = await fetchArray()
+        setContent(content)
+    }
+
     // Display content on browser
     const listComp = () => {
-        return content.map((item, i) => <Character key={i} userID={item.id} name={item.name} race={item.race} save={saveChanges} updateComment={updateComment} status={item.status} comment={item.comment} />);
+        return content.map((item, i) => <Character
+            key={i}
+            userID={item.id}
+            name={item.name}
+            race={item.race}
+            save={saveChanges}
+            updateComment={updateComment}
+            status={item.status}
+            comment={item.comment}
+            health={item.health}
+            stamina={item.stamina}
+            gold={item.gold}
+            updateHealthStaminaGold={updateHealthStaminaGold}
+            location={item.location}
+            updateLocation={updateLocation}
+        />);
+
     }
 
     return (
